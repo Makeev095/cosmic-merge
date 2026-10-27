@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Космический синтез</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0B0F12;
+      touch-action: none; overscroll-behavior: none; -webkit-user-select: none; user-select: none;
+      -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; }
+    #game-container { position: fixed; inset: 0; background: #0B0F12; }
+    canvas { display: block; outline: none; }
+    /* Эквивалент Tailwind-класса bg-[#0B0F12] без загрузки самого Tailwind (экономим вес) */
+    .bg-\[\#0B0F12\] { background-color: #0B0F12; }
+  </style>
+</head>
+<body class="bg-[#0B0F12]">
+  <div id="game-container" class="bg-[#0B0F12]"></div>
+
+  <!-- Официальный Yandex Games SDK (должен идти перед игровыми скриптами) -->
+  <script src="https://yandex.ru/games/sdk/v2"></script>
+  <!-- Phaser 3. Перед заливкой в Яндекс положите phaser.min.js в архив и поменяйте путь на локальный. -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
