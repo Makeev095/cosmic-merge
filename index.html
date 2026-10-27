@@ -18,8 +18,9 @@
 <body class="bg-[#0B0F12]">
   <div id="game-container" class="bg-[#0B0F12]"></div>
 
-  <!-- Официальный Yandex Games SDK (должен идти перед игровыми скриптами) -->
-  <script src="https://yandex.ru/games/sdk/v2"></script>
+  <!-- Официальный Yandex Games SDK. Для игры-архива в консоли Яндекса нужен ОТНОСИТЕЛЬНЫЙ путь /sdk.js (требование модерации).
+       Локально файла нет — игра переходит в dev-режим (реклама и покупки имитируются). Должен идти перед игровыми скриптами. -->
+  <script src="/sdk.js"></script>
   <!-- Phaser 3. Перед заливкой в Яндекс положите phaser.min.js в архив и поменяйте путь на локальный. -->
   <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
   <script type="module" src="src/main.js"></script>
